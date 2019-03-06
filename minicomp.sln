@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minicomp.processor", "minic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minicomp.memory", "minicomp.memory\minicomp.memory.csproj", "{C6C1B526-4267-4DFD-A677-76F1DD4A256E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minicomp", "minicomp\minicomp.csproj", "{94C10011-DFB3-4A4F-A7E6-9A42EB6CDDA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C6C1B526-4267-4DFD-A677-76F1DD4A256E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6C1B526-4267-4DFD-A677-76F1DD4A256E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6C1B526-4267-4DFD-A677-76F1DD4A256E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94C10011-DFB3-4A4F-A7E6-9A42EB6CDDA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C10011-DFB3-4A4F-A7E6-9A42EB6CDDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94C10011-DFB3-4A4F-A7E6-9A42EB6CDDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94C10011-DFB3-4A4F-A7E6-9A42EB6CDDA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
