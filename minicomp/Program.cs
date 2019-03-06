@@ -1,4 +1,6 @@
-﻿using System;
+﻿using log4net;
+using log4net.Config;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,13 +12,21 @@ namespace minicomp
     {
         static void Main(string[] args)
         {
+            ILog logger = LogManager.GetLogger("main");
+
             try
             {
+                BasicConfigurator.Configure();
+                logger.Info("Starting up...");
 
+                Runner proc = new Runner();
+                proc.ParseArgs(args);
+                proc.Run();
+                logger.Info("Shutting down...");
             }
             catch(Exception ex)
             {
-
+                logger.Fatal("Exception while running minicomp", ex);
             }
         }
     }
