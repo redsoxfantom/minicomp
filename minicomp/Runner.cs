@@ -41,7 +41,6 @@ namespace minicomp
                     arg = args[i];
                 }
             }
-
         }
 
         public void Run()
