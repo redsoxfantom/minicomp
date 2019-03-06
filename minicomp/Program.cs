@@ -12,7 +12,7 @@ namespace minicomp
     {
         static void Main(string[] args)
         {
-            ILog logger = LogManager.GetLogger("main");
+            ILog logger = LogManager.GetLogger(typeof(Program));
 
             try
             {
