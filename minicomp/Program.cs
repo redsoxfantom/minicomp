@@ -16,7 +16,6 @@ namespace minicomp
 
             try
             {
-                BasicConfigurator.Configure();
                 logger.Info("Starting up...");
 
                 Runner proc = new Runner();
