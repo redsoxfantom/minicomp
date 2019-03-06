@@ -56,6 +56,8 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="samples\SampleComputerDefinition.json" />
+    <None Include="samples\SampleMemoryDefinition.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
