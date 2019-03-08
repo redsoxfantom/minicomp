@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="datacontracts\ComputerDefinition.cs" />
     <Compile Include="datacontracts\MemoryDefinitions.cs" />
     <Compile Include="datacontracts\ParserException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

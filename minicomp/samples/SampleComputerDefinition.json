@@ -1,1 +1,33 @@
-﻿{}
+﻿{
+	"Version" : 1,
+	"Processor" : {
+		"Type" : "Basic",
+		"InstructionSet" : "Basic",
+		"Registers" : [
+			{
+				"Type" : "16bit",
+				"Name" : "SP"
+			},
+			{
+				"Type" : "16bit",
+				"Name" : "A"
+			},
+			{
+				"Type" : "16bit",
+				"Name" : "B"
+			},
+			{
+				"Type" : "8bit",
+				"Name" : "X"
+			},
+			{
+				"Type" : "8bit",
+				"Name" : "Y"
+			}
+		]
+	},
+	"Memory" : {
+		"Type" : "Basic",
+		"Size" : 65535
+	}
+}
