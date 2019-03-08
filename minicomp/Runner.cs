@@ -1,7 +1,9 @@
 ﻿using log4net;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,6 +43,24 @@ namespace minicomp
                     arg = args[i];
                 }
             }
+
+            if(memoryDefinitionFile == string.Empty)
+            {
+                memoryDefinitionFile = Path.Combine(GetCurrentDirectory(), "samples", "SampleMemoryDefinition.json");
+            }
+
+            if(computerDefinitionFile == string.Empty)
+            {
+                computerDefinitionFile = Path.Combine(GetCurrentDirectory(), "samples", "SampleComputerDefinition.json");
+            }
+        }
+
+        public string GetCurrentDirectory()
+        {
+            string codebase = Assembly.GetExecutingAssembly().CodeBase;
+            UriBuilder bldr = new UriBuilder(codebase);
+            string path = Uri.UnescapeDataString(bldr.Path);
+            return Path.GetDirectoryName(path);
         }
 
         public void Run()

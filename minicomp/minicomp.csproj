@@ -53,7 +53,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="samples\SampleComputerDefinition.json" />
+    <None Include="samples\SampleComputerDefinition.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="samples\SampleMemoryDefinition.json" />
   </ItemGroup>
   <ItemGroup>
