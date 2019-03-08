@@ -57,7 +57,9 @@
     <None Include="samples\SampleComputerDefinition.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="samples\SampleMemoryDefinition.json" />
+    <None Include="samples\SampleMemoryDefinition.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\minicomp.common\minicomp.common.csproj">

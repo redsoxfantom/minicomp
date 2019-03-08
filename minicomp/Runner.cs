@@ -1,4 +1,5 @@
 ﻿using log4net;
+using minicomp.common.datacontracts;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -53,6 +54,8 @@ namespace minicomp
             {
                 computerDefinitionFile = Path.Combine(GetCurrentDirectory(), "samples", "SampleComputerDefinition.json");
             }
+
+            MemoryDefinitions memoryDef = MemoryDefinitions.ParseFromFile(memoryDefinitionFile);
         }
 
         public string GetCurrentDirectory()
