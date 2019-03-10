@@ -26,6 +26,10 @@ namespace minicomp
         {
             memory = MemoryFactory.CreateMemory(computerDefinition.MemoryInfo.Type);
             memory.Initialize(computerDefinition.MemoryInfo.Size);
+            foreach(var memDef in memoryDefinition)
+            {
+                memory.UpdateMemoryLocation(memDef.Location, memDef.Value);
+            }
 
             Dictionary<string, IRegister> registers = new Dictionary<string, IRegister>();
             foreach(var registerDef in computerDefinition.RegisterDefinitions)
