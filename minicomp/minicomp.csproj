@@ -66,6 +66,18 @@
       <Project>{29fe24f7-80dd-42a2-86b3-bb669db00d48}</Project>
       <Name>minicomp.common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\minicomp.interfaces\minicomp.interfaces.csproj">
+      <Project>{6666DB42-CC4A-4E42-8739-B03CBE2D69F2}</Project>
+      <Name>minicomp.interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\minicomp.memory\minicomp.memory.csproj">
+      <Project>{C6C1B526-4267-4DFD-A677-76F1DD4A256E}</Project>
+      <Name>minicomp.memory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\minicomp.processor\minicomp.processor.csproj">
+      <Project>{BFB98737-3472-4EEC-BEDE-94D77733422B}</Project>
+      <Name>minicomp.processor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

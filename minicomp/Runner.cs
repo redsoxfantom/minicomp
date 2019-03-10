@@ -56,6 +56,7 @@ namespace minicomp
             }
 
             MemoryDefinitions memoryDef = MemoryDefinitions.ParseFromFile(memoryDefinitionFile);
+            ComputerDefinition computerDef = ComputerDefinition.ParseFromFile(computerDefinitionFile);
         }
 
         public string GetCurrentDirectory()
