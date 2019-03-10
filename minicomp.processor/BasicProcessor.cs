@@ -17,7 +17,7 @@ namespace minicomp.processor
         {
             try
             {
-                instructionSet.ExecuteNextInstruction(this);
+                instructionSet.ExecuteNextInstruction(this, memory);
             }
             catch(Exception ex)
             {

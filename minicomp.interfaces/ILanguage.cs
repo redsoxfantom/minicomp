@@ -8,6 +8,6 @@ namespace minicomp.interfaces
 {
     public interface ILanguage
     {
-        void ExecuteNextInstruction(IProcessor proc);
+        void ExecuteNextInstruction(IProcessor proc, IMemory mem);
     }
 }
