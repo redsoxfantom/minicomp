@@ -15,6 +15,7 @@ namespace minicomp.common.tests.datacontracts
             ComputerDefinition def = new ComputerDefinition();
             def.InstructionSet = "InstructionSet";
             def.ProcessorType = "Processor";
+            def.Speed = 100;
             def.MemoryInfo = new MemoryInfo()
             {
                 Type = "Memory",
@@ -28,6 +29,7 @@ namespace minicomp.common.tests.datacontracts
             ComputerDefinition newDef = ComputerDefinition.ParseFromFile(Path.Combine(Path.GetTempPath(), "ComputerDef.json"));
             Assert.AreEqual(def.InstructionSet, newDef.InstructionSet);
             Assert.AreEqual(def.ProcessorType, newDef.ProcessorType);
+            Assert.AreEqual(def.Speed, newDef.Speed);
             Assert.AreEqual(def.MemoryInfo.Type, newDef.MemoryInfo.Type);
             Assert.AreEqual(def.MemoryInfo.Size, newDef.MemoryInfo.Size);
             Assert.AreEqual(def.RegisterDefinitions.Count, newDef.RegisterDefinitions.Count);

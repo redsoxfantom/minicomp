@@ -18,6 +18,7 @@ namespace minicomp.common.datacontracts
         public string InstructionSet { get; set; }
         public List<RegisterInfo> RegisterDefinitions { get; set; }
         public MemoryInfo MemoryInfo { get; set; }
+        public long Speed { get; set; }
 
         public static ComputerDefinition ParseFromFile(string filename)
         {
@@ -52,6 +53,7 @@ namespace minicomp.common.datacontracts
             dynamic processorDef = fileContents.Processor;
             definition.ProcessorType = processorDef.Type;
             definition.InstructionSet = processorDef.InstructionSet;
+            definition.Speed = processorDef.Speed;
             dynamic registerDefs = processorDef.Registers;
             List<RegisterInfo> parsedRegisterDefs = new List<RegisterInfo>();
             foreach(var registerDef in registerDefs)
@@ -88,6 +90,8 @@ namespace minicomp.common.datacontracts
                 writer.WriteStartObject();
                 writer.WritePropertyName("Type");
                 writer.WriteValue(ProcessorType);
+                writer.WritePropertyName("Speed");
+                writer.WriteValue(Speed);
                 writer.WritePropertyName("InstructionSet");
                 writer.WriteValue(InstructionSet);
                 writer.WritePropertyName("Registers");

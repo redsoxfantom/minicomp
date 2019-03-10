@@ -2,6 +2,7 @@
 	"Version" : 1,
 	"Processor" : {
 		"Type" : "Basic",
+		"Speed" : 100,
 		"InstructionSet" : "Basic",
 		"Registers" : [
 			{
