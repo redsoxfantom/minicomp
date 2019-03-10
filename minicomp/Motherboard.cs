@@ -22,7 +22,7 @@ namespace minicomp
             this.debug = debug;
         }
 
-        public void Initialize(ComputerDefinition computerDefinition, MemoryDefinition memoryDefinition)
+        public void Initialize(ComputerDefinition computerDefinition, MemoryDefinitions memoryDefinition)
         {
             memory = MemoryFactory.CreateMemory(computerDefinition.MemoryInfo.Type);
             memory.Initialize(computerDefinition.MemoryInfo.Size);

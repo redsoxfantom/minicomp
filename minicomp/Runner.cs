@@ -13,6 +13,7 @@ namespace minicomp
     public class Runner
     {
         private static readonly ILog logger = LogManager.GetLogger(typeof(Runner));
+        Motherboard motherboard;
 
         public Runner()
         {
@@ -57,6 +58,8 @@ namespace minicomp
 
             MemoryDefinitions memoryDef = MemoryDefinitions.ParseFromFile(memoryDefinitionFile);
             ComputerDefinition computerDef = ComputerDefinition.ParseFromFile(computerDefinitionFile);
+            motherboard = new Motherboard(debug);
+            motherboard.Initialize(computerDef, memoryDef);
         }
 
         public string GetCurrentDirectory()
