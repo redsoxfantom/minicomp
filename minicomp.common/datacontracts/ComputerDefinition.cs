@@ -18,7 +18,7 @@ namespace minicomp.common.datacontracts
         public string InstructionSet { get; set; }
         public List<RegisterInfo> RegisterDefinitions { get; set; }
         public MemoryInfo MemoryInfo { get; set; }
-        public long Speed { get; set; }
+        public int Speed { get; set; }
 
         public static ComputerDefinition ParseFromFile(string filename)
         {

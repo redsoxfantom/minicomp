@@ -1,4 +1,5 @@
-﻿using minicomp.common.datacontracts;
+﻿using log4net;
+using minicomp.common.datacontracts;
 using minicomp.interfaces;
 using minicomp.memory;
 using minicomp.processor;
@@ -6,16 +7,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace minicomp
 {
     public class Motherboard
     {
+        private static readonly ILog logger = LogManager.GetLogger(typeof(Motherboard));
         IProcessor proc;
         IMemory memory;
         ILanguage lang;
         bool debug;
+        int speed;
 
         public Motherboard(bool debug = false)
         {
@@ -40,6 +44,21 @@ namespace minicomp
             }
             proc = ProcessorFactory.CreateProcessor(computerDefinition.ProcessorType);
             proc.Initialize(memory, registers, lang);
+            speed = computerDefinition.Speed;
+        }
+
+        public void Execute()
+        {
+            while(true)
+            {
+                proc.ExecuteNextInstruction();
+                Thread.Sleep(speed);
+                if(debug)
+                {
+                    logger.Info("Press [enter] to continue");
+                    Console.ReadLine();
+                }
+            }
         }
     }
 }

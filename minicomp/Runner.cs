@@ -73,6 +73,8 @@ namespace minicomp
         public void Run()
         {
             logger.Info("Beginning execution");
+            motherboard.Execute();
+            logger.Info("Ending execution");
         }
     }
 }
