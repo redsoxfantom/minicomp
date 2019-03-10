@@ -10,7 +10,11 @@ namespace minicomp.interfaces
     {
         void Initialize(long size);
         void UpdateMemoryLocation(long location, byte newValue);
-        byte GetMemoryValue(long location);
+        byte GetByte(long location);
+        short GetShort(long location);
+        int GetInt(long location);
+        long GetLong(long location);
+        byte[] GetValues(long location, long length);
         void SubscribeForMemoryCell(long location, MemoryCellUpdatedEventArgs handler);
         void UnsubscribeForMemoryCell(long location, MemoryCellUpdatedEventArgs handler);
         void SubscribeForMemoryCells(long startLocation, long endLocation, MemoryCellUpdatedEventArgs handler);

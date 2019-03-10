@@ -29,7 +29,7 @@ namespace minicomp.processor
         {
             try
             {
-                return memory.GetMemoryValue(memoryLocation);
+                return memory.GetByte(memoryLocation);
             }
             catch(Exception ex)
             {
