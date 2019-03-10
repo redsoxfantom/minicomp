@@ -44,6 +44,7 @@
     <Compile Include="BasicMemory.cs" />
     <Compile Include="BasicMemoryCell.cs" />
     <Compile Include="MemoryException.cs" />
+    <Compile Include="MemoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
