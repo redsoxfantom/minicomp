@@ -30,7 +30,7 @@ namespace minicomp.memory
 
         public long GetLong(long location)
         {
-            ValidateLocation(location, 4);
+            ValidateLocation(location, 8);
             byte b1 = memoryCells[(int)location].Value;
             byte b2 = memoryCells[(int)location + 1].Value;
             byte b3 = memoryCells[(int)location + 2].Value;
@@ -40,7 +40,14 @@ namespace minicomp.memory
             byte b7 = memoryCells[(int)location + 6].Value;
             byte b8 = memoryCells[(int)location + 7].Value;
 
-            return (long)((b1 << 56) + (b2 << 48) + (b3 << 40) + (b4 << 32) + (b5 << 24) + (b6 << 16) + (b7 << 8) + b8);
+            return (long)(((long)b1 << 56) + 
+                          ((long)b2 << 48) + 
+                          ((long)b3 << 40) + 
+                          ((long)b4 << 32) + 
+                          ((long)b5 << 24) + 
+                          ((long)b6 << 16) + 
+                          ((long)b7 << 8)  + 
+                          b8);
         }
 
         public short GetShort(long location)
@@ -119,7 +126,7 @@ namespace minicomp.memory
 
         private void ValidateLocation(long location, long size = 1)
         {
-            if (location > memoryCells.Count || location + (size - 1) > memoryCells.Count)
+            if (location >= memoryCells.Count || location + (size - 1) >= memoryCells.Count)
             {
                 throw new MemoryException(String.Format("Memory location {0} and length {1} out of range of available memory {2}", location, size, memoryCells.Count));
             }

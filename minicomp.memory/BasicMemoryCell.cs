@@ -9,6 +9,8 @@ namespace minicomp.memory
 {
     public class BasicMemoryCell : IMemoryCell
     {
+        private byte _value;
+
         public BasicMemoryCell(long location)
         {
             Location = location;
@@ -19,27 +21,17 @@ namespace minicomp.memory
         {
             get
             {
-                return Value;
+                return _value;
             }
             set
             {
-                byte oldValue = Value;
-                Value = value;
-                OnMemoryCellUpdated?.Invoke(this, oldValue, Value);
+                byte oldValue = _value;
+                _value = value;
+                OnMemoryCellUpdated?.Invoke(this, oldValue, _value);
             }
         }
 
-        public long Location
-        {
-            get
-            {
-                return Location;
-            }
-            private set
-            {
-                Location = value;
-            }
-        }
+        public long Location { get; private set; }
 
         public event MemoryCellUpdatedEventArgs OnMemoryCellUpdated;
     }
